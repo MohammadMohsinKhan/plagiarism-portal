@@ -67,11 +67,10 @@ const Home = () => {
             <div className="bg-card rounded-lg p-6 shadow-sm">
               <h2 className="text-2xl font-semibold mb-4">View Results</h2>
               <p className="text-muted-foreground mb-6">
-                Check the analysis results of your previous submissions.
+                Check the analysis results of your previous submissions by uploading the results zip file emailed to you.
               </p>
               
               <div className="text-center py-8 text-muted-foreground">
-                <p>No analysis results yet.</p>
                 <p>Upload a dataset to get started.</p>
               </div>
             </div>
