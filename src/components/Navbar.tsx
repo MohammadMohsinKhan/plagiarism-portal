@@ -9,12 +9,6 @@ const Navbar = () => {
           SyntaxSentinals
         </Link>
         <div className="flex gap-4 items-center">
-          <Button variant="ghost" asChild>
-            <Link to="/features">Features</Link>
-          </Button>
-          <Button variant="ghost" asChild>
-            <Link to="/pricing">Pricing</Link>
-          </Button>
           <Button className="bg-primary hover:bg-primary/90" asChild>
             <Link to="/login">Log In</Link>
           </Button>

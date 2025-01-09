@@ -13,14 +13,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Ensure Your Work's Originality
+              Verify Academic and Contest Submission Originality
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Advanced plagiarism detection powered by AI. Check your content against billions of sources in seconds.
+              Empower educators and contest administrators with advanced AI-powered plagiarism detection. Ensure the integrity of student work and competition submissions.
             </p>
             <div className="flex gap-4 justify-center">
               <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Try For Free
+                Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline">
@@ -42,9 +42,9 @@ const Index = () => {
           <div className="max-w-3xl mx-auto">
             <div className="space-y-8">
               {[
-                { step: "1", text: "Upload your document" },
-                { step: "2", text: "Our AI analyzes your content" },
-                { step: "3", text: "Review detailed originality report" },
+                { step: "1", text: "Upload student or contestant submissions" },
+                { step: "2", text: "Our AI analyzes content against extensive databases" },
+                { step: "3", text: "Review detailed originality reports" },
               ].map((item) => (
                 <div key={item.step} className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
@@ -62,7 +62,7 @@ const Index = () => {
       <footer className="bg-gray-50 py-12">
         <div className="container mx-auto px-4">
           <div className="text-center text-gray-600">
-            <p>© 2024 PlagiarismGuard. All rights reserved.</p>
+            <p>© 2024 SyntaxSentinals. All rights reserved.</p>
           </div>
         </div>
       </footer>
