@@ -18,6 +18,7 @@ const Home = () => {
 
   const handleAnalyzeClick = () => {
     // Navigate to the Loading Page
+    console.log("Analyzing dataset...");
     router.push("/loading");
   };
 
