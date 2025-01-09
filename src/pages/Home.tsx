@@ -3,14 +3,22 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Upload } from "lucide-react";
+import { useRouter } from "next/router";
 
 const Home = () => {
+  const router = useRouter();
+
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       // Handle file upload logic here
       console.log("File uploaded:", file);
     }
+  };
+
+  const handleAnalyzeClick = () => {
+    // Navigate to the Loading Page
+    router.push("/loading");
   };
 
   return (
@@ -24,7 +32,7 @@ const Home = () => {
               <p className="text-muted-foreground mb-6">
                 Upload a dataset to analyze for potential code plagiarism.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="border-2 border-dashed border-input rounded-lg p-6 text-center">
                   <Upload className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
@@ -53,8 +61,8 @@ const Home = () => {
                       className="mt-1"
                     />
                   </div>
-                  
-                  <Button className="w-full">
+
+                  <Button className="w-full" onClick={handleAnalyzeClick}>
                     Analyze Dataset
                   </Button>
                 </div>
@@ -69,7 +77,7 @@ const Home = () => {
               <p className="text-muted-foreground mb-6">
                 Check the analysis results of your previous submissions by uploading the results zip file emailed to you.
               </p>
-              
+
               <div className="text-center py-8 text-muted-foreground">
                 <p>Upload a dataset to get started.</p>
               </div>
