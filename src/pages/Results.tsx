@@ -77,14 +77,14 @@ const Results = () => {
         </div>
 
         {/* Similarity Distribution Chart */}
-        <Card className="p-6 mb-8">
+        <Card className="p-6 mb-8 h-96"> {/* Increase height here */}
           <h2 className="text-xl font-semibold mb-4">Similarity Distribution</h2>
-          <div className="w-full h-72 overflow-hidden flex justify-center items-center">
+          <div className="w-full h-full flex justify-center items-center overflow-hidden">
             <ChartContainer config={{}}>
               <BarChart
                 data={distributionData}
-                width={400} // Ensure the chart has a fixed width
-                height={250} // Adjust the height as needed
+                width={500} // Adjust width to fit within the card
+                height={300} // Adjust height to fit within the card
                 margin={{ top: 20, right: 30, left: 20, bottom: 30 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
