@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Loader } from "lucide-react";
-import { useRouter } from "next/router";
+import { useNavigate } from "react-router-dom";
 
 const AnalyzeLoadingPage = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-background">
@@ -12,7 +12,7 @@ const AnalyzeLoadingPage = () => {
         <p className="text-muted-foreground text-center">
           Analyzing dataset. This might take a few hours. Results will be emailed to you.
         </p>
-        <Button onClick={() => router.push("/")}>Analyze Another Dataset</Button>
+        <Button onClick={() => navigate("/")}>Analyze Another Dataset</Button>
       </div>
     </div>
   );

@@ -3,10 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Upload } from "lucide-react";
-import { useRouter } from "next/router";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -19,7 +19,7 @@ const Home = () => {
   const handleAnalyzeClick = () => {
     // Navigate to the Loading Page
     console.log("Analyzing dataset...");
-    router.push("/loading");
+    navigate("/loading");
   };
 
   return (
