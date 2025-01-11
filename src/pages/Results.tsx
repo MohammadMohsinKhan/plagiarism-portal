@@ -79,11 +79,19 @@ const Results = () => {
         {/* Similarity Distribution Chart */}
         <Card className="p-6 mb-8">
           <h2 className="text-xl font-semibold mb-4">Similarity Distribution</h2>
-          <div className="h-[300px] w-full">
+          <div className="w-full" style={{ height: '300px', maxHeight: '300px' }}>
             <ChartContainer config={{}}>
-              <BarChart data={distributionData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+              <BarChart 
+                data={distributionData}
+                margin={{ top: 20, right: 30, left: 20, bottom: 30 }}
+              >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="similarity" />
+                <XAxis 
+                  dataKey="similarity"
+                  angle={-45}
+                  textAnchor="end"
+                  height={60}
+                />
                 <YAxis />
                 <Tooltip />
                 <Bar dataKey="count" fill="#6366F1" />
