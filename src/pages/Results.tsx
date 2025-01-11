@@ -54,6 +54,11 @@ const Results = () => {
   return (
     <div className="min-h-screen bg-background p-8">
       <div className="container mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold mb-2">Source Code Plagiarism Detection Report</h1>
+          <p className="text-muted-foreground">Analysis results for submitted code files</p>
+        </div>
+
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Card className="p-6">
@@ -74,7 +79,7 @@ const Results = () => {
         {/* Similarity Distribution Chart */}
         <Card className="p-6 mb-8">
           <h2 className="text-xl font-semibold mb-4">Similarity Distribution</h2>
-          <div className="w-full h-[400px]">
+          <div className="w-full aspect-[2/1] min-h-[400px]">
             <ChartContainer config={{}}>
               <BarChart
                 data={distributionData}
