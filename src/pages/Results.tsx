@@ -54,11 +54,6 @@ const Results = () => {
   return (
     <div className="min-h-screen bg-background p-8">
       <div className="container mx-auto">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Source Code Plagiarism Detection Report</h1>
-          <p className="text-muted-foreground">Analysis results for submitted code files</p>
-        </div>
-
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Card className="p-6">
@@ -77,15 +72,13 @@ const Results = () => {
         </div>
 
         {/* Similarity Distribution Chart */}
-        <Card className="p-6 mb-8 h-96"> {/* Increase height here */}
+        <Card className="p-6 mb-8">
           <h2 className="text-xl font-semibold mb-4">Similarity Distribution</h2>
-          <div className="w-full h-full flex justify-center items-center overflow-hidden">
+          <div className="w-full h-[400px]">
             <ChartContainer config={{}}>
               <BarChart
                 data={distributionData}
-                width={500} // Adjust width to fit within the card
-                height={300} // Adjust height to fit within the card
-                margin={{ top: 20, right: 30, left: 20, bottom: 30 }}
+                margin={{ top: 20, right: 30, left: 40, bottom: 60 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis
@@ -93,10 +86,18 @@ const Results = () => {
                   angle={-45}
                   textAnchor="end"
                   height={60}
+                  interval={0}
+                  tick={{ fontSize: 12 }}
                 />
-                <YAxis />
+                <YAxis 
+                  tick={{ fontSize: 12 }}
+                />
                 <Tooltip />
-                <Bar dataKey="count" fill="#6366F1" />
+                <Bar 
+                  dataKey="count" 
+                  fill="#6366F1"
+                  maxBarSize={50}
+                />
               </BarChart>
             </ChartContainer>
           </div>
