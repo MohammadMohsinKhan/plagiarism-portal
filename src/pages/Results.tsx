@@ -79,7 +79,7 @@ const Results = () => {
         {/* Similarity Distribution Chart */}
         <Card className="p-6 mb-8">
           <h2 className="text-xl font-semibold mb-4">Similarity Distribution</h2>
-          <div className="w-full" style={{ height: '300px', maxHeight: '300px' }}>
+          <div className="w-full h-72">
             <ChartContainer config={{}}>
               <BarChart 
                 data={distributionData}
