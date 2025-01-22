@@ -19,7 +19,7 @@ const Navbar = () => {
               </span>
               <Button
                 variant="outline"
-                onClick={() => logout({ returnTo: window.location.origin })}
+                onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
               >
                 Log Out
               </Button>
